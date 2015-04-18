@@ -1,0 +1,62 @@
+video {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+}
+.pink{
+	text-align: center;
+	font-size: 5em;
+	margin-top: 7px;
+	font-family: 'Luckiest Guy', cursive;
+}
+div {
+	font-family: calibri;
+}
+.wrapper {
+	width:600px;
+	margin-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.list-name{
+	font-size: 4em;
+	background: rgba(0,0,0,0.3);
+	padding-left: 10px;
+}
+.check {
+	float: left;
+	margin-left: 4px;
+	margin-top: 4px;
+	display: inline;
+}
+.check img {
+	height: 30px;
+}
+
+.item-content {
+	display: inline;
+	margin-left: 25px;
+
+}
+.list-item{
+	font-size: 2em;
+	margin-top: 20px;
+	background: rgba(0,0,0,0.3);
+}
+.delet {
+	display: inline;
+	float: right;
+}
+.delet img {
+	height: 18px;
+	margin-bottom: 9px;
+	margin-right: 3px;
+}
+/* {
+	outline: 1px red solid;
+}
