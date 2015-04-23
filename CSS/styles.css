@@ -27,14 +27,7 @@ z-index: -100;
 	background: rgba(0,0,0,0.3);
 	padding-left: 10px;
 }
-.checkBox {
-	float: left;
-	margin-left: 4px;
-	margin-top: 4px;
-	display: inline;
-	width: 30px;
-	height: 30px;
-}
+
 .check{
 	background-image: url('../images/checkmark-2-512.png');
 	width: 100%;
@@ -42,17 +35,47 @@ z-index: -100;
 	background-size: cover;
     background-repeat: no-repeat;
 }
-.restore {
+/*.restore {
 	background-image: url('../images/Restore-Window-512 (1).png');
 	width: 100%;
 	height: 100%;
 	background-size: cover;
     background-repeat: no-repeat;
     display: none;
+}*/
+/*.checkBox .ui-selected {
+	background-image: url('../images/checkmark-2-512.png');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+    background-repeat: no-repeat;
+}*/
+.items .ui-selected {
+	background-image: url('../images/Restore-Window-512 (1).png');
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.checkBox {
+	float: left;
+	margin-left: 4px;
+	margin-top: 4px;
+	display: inline;
+	width: 30px;
+	height: 30px;
+
 }
 .item-content {
 	display: inline;
 	margin-left: 25px;
+}
+.remember {
+	display: inline;
+}
+.record {
+	display: inline;
 }
 .list-item{
 	font-size: 2em;
