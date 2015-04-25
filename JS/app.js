@@ -1,20 +1,24 @@
 $(document).ready(function(){
+	var itemListTamplate = '<div class="list-item"><div class="checkBox"><div class="check"></div><div class="restore"></div></div><div class="item-content"><input class="remember"></div><!--change <p> to <imput> and style it--><div class="delete"><img src="Images/005-X-512.png" alt=""></div></div>'
 	$('.list-item .remember').click(function(){
-		$(this).text('').css('text-indent', '3em');
+		$(this).val('')/*.css('text-indent', '3em');
 		/*why dosent add min width?*/
-		$(this).attr('contenteditable','true');
+		/*$(this).attr('contnteditable','true');
 		/*var itemToRemember = $(this).val();*/
 	})
-	$('.remember').on("keydown", function(event){
+	$('.wrapper').on("keydown", '.remember', function(event){
 	if (event.which == '13'){
-	/*$('.list-item').first().clone(true).appendTo('.wrapper');*/
-	$(this).parent().parent().clone(true).appendTo('.wrapper');
-	/*why after() didnt work?*/
-	$(this).text('');
+	/* 1. what does .on do that is different than a normal .click
+	2. elements which were added to the DOM dynamicly cant be selected 
+	so that is why ("keydown", '.remember' , ... is added
+	3. How do I change the focus to the second list item after it's created*/
+		$('.wrapper').append(itemListTamplate);
 	};
 	});
 	$('.checkBox').data('state',1 );
-	$('.checkBox').on("click", function(){
+	$('.wrapper').on("click", '.checkBox', function(){
+		/* the check/uncheck functionality is gone. adding , '.checkBox' after "click"
+		doesnt work*/
 		if ($(this).data('state')==1){
 			$(this).children('.check').hide();
 			$(this).children('.restore').show();
@@ -30,7 +34,7 @@ $(document).ready(function(){
 			$(this).data('state', 1);
 			}
 	});	
-	$('.delete').on('click', function(){
+	$('.wrapper').on('click', '.delete', function(){
 		$(this).parent().hide();
 	});
 	$('.list-name').click(function(){

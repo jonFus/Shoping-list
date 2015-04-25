@@ -57,7 +57,16 @@ z-index: -100;
 	margin-left: 25px;
 }
 .remember {
-	display: inline;
+  display: inline;
+  padding: 0px;
+  width: 483px;
+  background-color: rgba(0,0,0,0);
+  border: none;
+  font-family: calibri;
+  font-size: 0.9em;
+}
+.remember:focus {
+	outline: 0;
 }
 .record {
 	display: inline;
